@@ -1,0 +1,395 @@
+/*
+Theme Name: My Custom Theme
+Theme URI: https://example.com/my-custom-theme
+Author: Your Name
+Author URI: https://example.com
+Description: A custom WordPress theme.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: my-custom-theme
+*/
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 0;
+    margin: 0;
+}
+
+/* Links */
+a {
+    color: #0073aa;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #005177;
+    text-decoration: underline;
+}
+
+/* Headers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+/* Navigation */
+.primary-menu {
+    display: flex;
+    list-style: none;
+    background-color: #0073aa;
+    padding: 0.5rem;
+}
+
+.primary-menu li {
+    margin: 0 1rem;
+}
+
+.primary-menu a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.primary-menu a:hover {
+    color: #f9f9f9;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    background: #fff;
+    margin: 1rem auto;
+    max-width: 800px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #0073aa;
+    color: #fff;
+    margin-top: 2rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Buttons */
+button,
+input[type="button"],
+input[type="submit"] {
+    background-color: #0073aa;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background-color: #005177;
+}
+
+/* Forms */
+input,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Menu Container */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0073aa;
+    padding: 0.5rem 1rem;
+    position: relative;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Primary Menu */
+.primary-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.primary-menu li {
+    margin: 0 1rem;
+}
+
+.primary-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.primary-menu a:hover {
+    color: #f9f9f9;
+}
+
+.primary-menu ul {
+    display: flex;
+    list-style-type: none;
+}
+
+/* Archive Projects */
+.archive-projects {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.archive-header h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.project-list {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.project-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+}
+
+.project-thumbnail img {
+    width: 100%;
+    height: auto;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.project-title {
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Single Project */
+.single-project {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.project-header h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.project-thumbnail img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.project-details {
+    background: #f9f9f9;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+
+.project-details p {
+    margin-bottom: 0.5rem;
+}
+
+.project-content {
+    margin-top: 2rem;
+    line-height: 1.6;
+}
+
+.back-to-projects {
+    margin: 20px 0;
+    text-align: right;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0073aa;
+    color: #fff;
+    text-decoration: none !important;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.back-button:hover {
+    background-color: #005f8d !important;
+    text-decoration: none !important;
+    color: #fff;
+}
+.project-filter-form {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+    /* align-items: center; */
+    flex-wrap: wrap;
+}
+
+.project-filter-form label {
+    margin-right: 5px;
+}
+
+.project-filter-form input,
+.project-filter-form button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.project-filter-form button {
+    background-color: #0073aa;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.project-filter-form button:hover {
+    background-color: #005177;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .primary-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .primary-menu li {
+        margin: 0.5rem 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .primary-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #0073aa;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .primary-menu.active {
+        display: flex;
+    }
+
+    .primary-menu li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+
+    .primary-menu ul {
+        display: flex;
+        list-style-type: none;
+        flex-direction: column;
+    }
+    .project-list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+    }
+}
