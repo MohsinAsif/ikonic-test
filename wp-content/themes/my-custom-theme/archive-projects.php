@@ -5,14 +5,16 @@
         <h1><?php post_type_archive_title(); ?></h1>
     </header>
     <form method="GET" class="project-filter-form">
-    <label for="start_date" style="font-size: 13px;font-weight: bold;">Start Date:</label>
-    <input type="date" name="start_date" id="start_date" style="max-width: 300px;" value="<?php echo esc_attr($_GET['start_date'] ?? ''); ?>">
+        <label for="start_date" style="font-size: 13px;font-weight: bold;">Start Date:</label>
+        <input type="date" name="start_date" id="start_date" style="max-width: 300px;"
+            value="<?php echo esc_attr($_GET['start_date'] ?? ''); ?>">
 
-    <label for="end_date" style="font-size: 13px;font-weight: bold;">End Date:</label>
-    <input type="date" name="end_date" id="end_date" style="max-width: 300px;" value="<?php echo esc_attr($_GET['end_date'] ?? ''); ?>">
+        <label for="end_date" style="font-size: 13px;font-weight: bold;">End Date:</label>
+        <input type="date" name="end_date" id="end_date" style="max-width: 300px;"
+            value="<?php echo esc_attr($_GET['end_date'] ?? ''); ?>">
 
-    <button type="submit" style="font-size: 13px;margin-bottom: 10px;">Filter</button>
-</form>
+        <button type="submit" style="font-size: 13px;margin-bottom: 10px;">Filter</button>
+    </form>
 
     <?php if (have_posts()): ?>
         <div class="project-list">

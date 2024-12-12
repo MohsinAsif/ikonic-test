@@ -311,6 +311,7 @@ textarea {
     text-decoration: none !important;
     color: #fff;
 }
+
 .project-filter-form {
     margin-bottom: 10px;
     display: flex;
@@ -387,6 +388,7 @@ textarea {
         list-style-type: none;
         flex-direction: column;
     }
+
     .project-list {
         display: grid;
         grid-template-columns: repeat(1, 1fr);

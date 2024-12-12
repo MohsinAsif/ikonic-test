@@ -101,27 +101,28 @@ function get_projects_data()
     return rest_ensure_response($response);
 }
 
-function filter_projects_by_date($query) {
+function filter_projects_by_date($query)
+{
     if (!is_admin() && $query->is_main_query() && is_post_type_archive('projects')) {
         $meta_query = array('relation' => 'AND');
 
         // Filter by Start Date
         if (!empty($_GET['start_date'])) {
             $meta_query[] = array(
-                'key'     => 'project_start_date',
-                'value'   => sanitize_text_field($_GET['start_date']),
+                'key' => 'project_start_date',
+                'value' => sanitize_text_field($_GET['start_date']),
                 'compare' => '>=',
-                'type'    => 'DATE',
+                'type' => 'DATE',
             );
         }
 
         // Filter by End Date
         if (!empty($_GET['end_date'])) {
             $meta_query[] = array(
-                'key'     => 'project_end_date',
-                'value'   => sanitize_text_field($_GET['end_date']),
+                'key' => 'project_end_date',
+                'value' => sanitize_text_field($_GET['end_date']),
                 'compare' => '<=',
-                'type'    => 'DATE',
+                'type' => 'DATE',
             );
         }
 
